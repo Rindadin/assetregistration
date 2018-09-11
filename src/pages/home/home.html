@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Ionic Blank
+    </ion-title>
+    <ion-buttons end>
+      <button ion-button (click)="goToSyncPage()"> Page Sync</button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content >
+  <ion-list>
+    <ion-item>
+      <ion-label fixed>Asset ID </ion-label>
+      <ion-input type="text" placeholder="Enter your asset ID" [(ngModel)]="asset.id"></ion-input>
+    
+    </ion-item>
+    <ion-item>
+      <ion-label fixed>Asset Name </ion-label>
+      <ion-input type="text" placeholder="Enter your asset ID" [(ngModel)]="asset.name"></ion-input>
+     
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Asset Type</ion-label>
+      <ion-select [(ngModel)]="asset.type" placeholder="please select">
+        <ion-option *ngFor="let type of assetType" [value]="type.id">{{type.name}}</ion-option>
+       
+      </ion-select>
+    </ion-item>
+
+  </ion-list>
+  <div padding>
+    <button ion-button (click)="saveAsset()">submit</button>
+  </div>
+</ion-content>

@@ -1,0 +1,7 @@
+{
+  "name": "assetregistration",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}

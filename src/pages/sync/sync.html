@@ -1,0 +1,23 @@
+<ion-header>
+
+  <ion-navbar color="dark">
+    <ion-title>Pending Sync</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="SwitchStyle()">
+        <ion-icon name="bulb"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+  <ngx-datatable class="fullscreen" [ngClass]="tablestyle" [rows]="rows"
+  [columnMode]="'force'" [sortType]="'multi'" [reorderable]="false">
+<ngx-datable-column name="id"></ngx-datable-column>
+<ngx-datable-column name="name"></ngx-datable-column>
+<ngx-datable-column name="type"></ngx-datable-column>
+</ngx-datatable>
+
+</ion-content>
